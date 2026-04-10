@@ -1,0 +1,14 @@
+.vscode/*
+.vscode
+dist/*
+dist/
+makefile
+node_modules/*
+node_modules/
+/generated/prisma
+.env
+data/*
+data/
+package-lock.json
+relatorios/
+relatorios/*
