@@ -73,7 +73,7 @@ class App {
                 case "7": this.gerarRelatorio(); break;
                 case "8": this.sair(); break;
                 case "t": this.testarSistema(); break;
-                case "a_ia_escreveu_o_teste":
+                case "nao_escrevi_o_teste":
                     if(Session.getUsuarioLogado()?.getUsuario() === "easter_egg"){
                         console.log(easter_egg);
                         console.log("Aguarde 5 segundos...");
