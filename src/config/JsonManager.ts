@@ -25,6 +25,7 @@ export class JsonManager<T extends JsonItem = JsonItem> {
             }
         } catch (error) {
             console.error(`Ocorreu um erro ao verificar/criar o arquivo: ${error}`);
+            console.error(`(☉_☉|☉_☉|☉_☉)`);
             throw error;
         }
     }
@@ -48,6 +49,7 @@ export class JsonManager<T extends JsonItem = JsonItem> {
             if (error instanceof SyntaxError) {
                 console.error(`Erro de parse JSON: ${error}`);
             }
+            console.error("eu não sei o que adiciono como easter egg, então este é mais um... inclusive, isso é um erro e eu não consegui ler o arquivo")
             return [];
         }
     }

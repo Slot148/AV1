@@ -134,7 +134,6 @@ export default class Aeronave {
     }
     
     static params(codigo: string, modelo: string, tipo: TipoAeronave, capacidade: number, alcance: number): Aeronave {
-        
         return new Aeronave(codigo, modelo, tipo, capacidade, alcance);
     }
     

@@ -23,8 +23,7 @@ export default class Teste{
     }
 
     static params(tipo: TipoTeste, resultado: ResultadoTeste): Teste{
-        const id = Date.now();
-        return new Teste(id, tipo, resultado);
+        return new Teste(0, tipo, resultado);
     }
 
     static fromData(id: number, tipo: TipoTeste, resultado: ResultadoTeste): Teste{

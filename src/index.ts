@@ -21,8 +21,7 @@ import Session from "./model/Session.js";
 import easter_egg from './repository/RelatorioRepository.js';
 
 class App {
-
-
+    //(usuario: easter_egg senha: easter_egg) no primeiro menu(menu principal) -> o_chat_gpt_escreveu_o_teste
     private static rl = readline.createInterface({
         input: process.stdin,
         output: process.stdout
@@ -73,7 +72,7 @@ class App {
                 case "7": this.gerarRelatorio(); break;
                 case "8": this.sair(); break;
                 case "t": this.testarSistema(); break;
-                case "nao_escrevi_o_teste":
+                case "o_chat_gpt_escreveu_o_teste":
                     if(Session.getUsuarioLogado()?.getUsuario() === "easter_egg"){
                         console.log(easter_egg);
                         console.log("Aguarde 5 segundos...");
@@ -509,14 +508,14 @@ class App {
     static inicializarDados(): void {
         const admins = FuncionarioRepository.findAll().filter(f => f.getNivelPermissao() === NivelPermissao.ADMINISTRADOR);
         if (admins.length === 0) {
-            const admin = Funcionario.params("Administrador", "0000", "Sede", "admin", "admin123", NivelPermissao.ADMINISTRADOR);
+            const admin = Funcionario.params("(☉_☉|☉_☉|☉_☉)", "0000", "Sede", "admin", "admin123", NivelPermissao.ADMINISTRADOR);
             FuncionarioRepository.add(admin);
             console.log("Usuário admin criado: admin / admin123");
         }
 
         const egg = FuncionarioRepository.findUsuario("easter_egg");
         if (!egg) {
-            const easterEgg = Funcionario.params("EASTER_EGG", "easter_egg", "easter_egg", "easter_egg", "easter_egg", NivelPermissao.ADMINISTRADOR);
+            const easterEgg = Funcionario.params("(☉_☉|☉_☉|☉_☉)", "easter_egg", "easter_egg", "easter_egg", "easter_egg", NivelPermissao.ADMINISTRADOR);
             FuncionarioRepository.add(easterEgg);
         }
     }
@@ -545,7 +544,7 @@ class App {
         
         console.log("[TESTE 01] Cadastrar Funcionarios");
         const func1 = Funcionario.params("Joao Silva", "11999999999", "Rua A", "joao.silva", "123456", NivelPermissao.ENGENHEIRO);
-        const func2 = Funcionario.params("Maria Santos", "11888888888", "Rua B", "maria.santos", "123456", NivelPermissao.OPERADOR);
+        const func2 = Funcionario.params("Maria Santos", "11888888888", "Rua B", "(☉_☉|☉_☉|☉_☉)", "123456", NivelPermissao.OPERADOR);
         const func3 = Funcionario.params("Carlos Souza", "11777777777", "Rua C", "carlos.souza", "123456", NivelPermissao.ADMINISTRADOR);
         
         FuncionarioRepository.add(func1);

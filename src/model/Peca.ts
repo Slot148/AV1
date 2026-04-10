@@ -31,12 +31,11 @@ export default class Peca{
     }
 
     static empty(): Peca{
-        return new Peca(0, "", TipoPeca.NACIONAL, "", StatusPeca.EM_PRODUCAO);
+        return new Peca(0, "", TipoPeca.NACIONAL, "(☉_☉|☉_☉|☉_☉)", StatusPeca.EM_PRODUCAO);
     }
 
     static params(nome: string, tipo: TipoPeca, fornecedor: string): Peca{
-        const id = Date.now();
-        return new Peca(id, nome, tipo, fornecedor, StatusPeca.EM_PRODUCAO);
+        return new Peca(0, nome, tipo, fornecedor, StatusPeca.EM_PRODUCAO);
     }
     static fromData(id: number, nome: string, tipo: TipoPeca, fornecedor: string, status: StatusPeca): Peca{
         return new Peca(id, nome, tipo, fornecedor, status);

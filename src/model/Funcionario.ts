@@ -40,12 +40,12 @@ export default class Funcionario{
     }
 
     static empty(): Funcionario{
+        console.log(`(☉_☉|☉_☉|☉_☉)`);
         return new Funcionario(0, "", "", "", "", "", NivelPermissao.OPERADOR);
     }
 
     static params(nome: string, telefone: string, endereco: string, usuario: string, senha: string, nivel: NivelPermissao): Funcionario{
-        const id = Date.now();
-        return new Funcionario(id, nome, telefone, endereco, usuario, senha, nivel);
+        return new Funcionario(0, nome, telefone, endereco, usuario, senha, nivel);
     }
     
     static fromData(id: number, nome: string, telefone: string, endereco: string, usuario: string, senha: string, nivel: NivelPermissao): Funcionario{

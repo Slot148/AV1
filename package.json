@@ -10,6 +10,6 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "clean": "rm -rf dist",
-    "compile-start": "npm install && npm run build && npm start"
+    "compile-start": "npm install && npm run build && npm start && echo \"isso conta como easter egg?\""
   }
 }

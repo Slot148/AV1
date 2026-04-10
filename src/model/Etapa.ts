@@ -47,8 +47,7 @@ export default class Etapa {
     }
 
     static params(nome: string, prazo: string, status: StatusEtapa): Etapa{
-        const id = Date.now();
-        return new Etapa(id, nome, prazo, status);
+        return new Etapa(0, nome, prazo, status);
     }
     static fromData(id: number, nome: string, prazo: string, status: StatusEtapa): Etapa{
         return new Etapa(id, nome, prazo, status);
