@@ -8,3 +8,5 @@ npm start
 ```bash
 npm run install-start
 ```
+## USUARIO E SENHA
+> usuario: admin | senha: admin123
